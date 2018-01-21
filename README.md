@@ -23,4 +23,3 @@ To never forget about UX
 
 ## What's next for CaptionIt
 Getting onto devices to begin giving hilarious and memorable captions to all
-# CaptionIt-2
