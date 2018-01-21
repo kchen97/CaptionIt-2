@@ -14,6 +14,8 @@ import SwiftyJSON
 class CaptionDataModel {
     var caption = ""
     var tags = [String]()
+    var emoji : [String] = ["💩","😘","😤","💀","🕺🏿","💃🏼","🙊","🔥","❤️","💸","🍺","💂🏼‍♀️","👍🏼","🤘🏼","👀","😱","😫","👻","😎","😈","😡","📲"]
+
     
     func configure(_ json: JSON) {
         if let items = json["description"]["tags"].array {
@@ -33,7 +35,10 @@ class CaptionDataModel {
         let randomNumber = Int(arc4random_uniform(UInt32(tags.count)))
         let coolHashTag = " #\(tags[randomNumber])"
         
-        return caption + coolHashTag
+        let randomNumberEmoji = Int(arc4random_uniform(UInt32(emoji.count)))
+        let coolEmoji = " \(emoji[randomNumberEmoji])"
+        
+        return caption + coolHashTag + coolEmoji
     }
     
     func reset() {
