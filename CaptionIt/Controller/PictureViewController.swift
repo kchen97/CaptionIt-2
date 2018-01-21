@@ -15,9 +15,8 @@ import ProgressHUD
 class PictureViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     //MARK: Properties
-
-    @IBOutlet weak var captionLabel: UILabel!
     @IBOutlet weak var userImageView: UIImageView!
+    @IBOutlet weak var captionLabel: UILabel!
     let microsoftURL = "https://westcentralus.api.cognitive.microsoft.com/vision/v1.0/describe?"
     let captionDataModel = CaptionDataModel()
 
@@ -65,8 +64,8 @@ class PictureViewController: UIViewController, UIImagePickerControllerDelegate, 
         
         let image = info[UIImagePickerControllerOriginalImage] as! UIImage
         userImageView.image = image
-        getImageData()
         captionDataModel.reset()
+        getImageData()
         dismiss(animated:true, completion: nil)
     }
     
@@ -75,7 +74,7 @@ class PictureViewController: UIViewController, UIImagePickerControllerDelegate, 
         SVProgressHUD.show()
         
         let headers: HTTPHeaders = ["Ocp-Apim-Subscription-Key" : "3ef12bba6b2040a2a06934fc85b83ae6", "Content-Type" : "application/octet-stream"]
-        let imageData  = UIImageJPEGRepresentation(userImageView.image!, 1.0)!
+        let imageData  = UIImageJPEGRepresentation(userImageView.image!, 0.3)!
 
         Alamofire.upload(imageData, to: microsoftURL, method: .post, headers: headers).responseJSON { (response) in
             if response.result.isSuccess {

@@ -1,19 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13770" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jbb-Rx-9aa">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jbb-Rx-9aa">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13770"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="HelveticaNeue.ttc">
-            <string>HelveticaNeue</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--CaptionIt!-->
         <scene sceneID="tne-QT-ifu">
@@ -23,28 +18,40 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OrW-bW-W6P">
-                                <rect key="frame" x="0.0" y="64" width="375" height="450"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="uxM-HW-Vrv">
+                                <rect key="frame" x="0.0" y="64" width="375" height="428"/>
+                                <subviews>
+                                    <imageView autoresizesSubviews="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OAP-6g-aDV">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="428"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="450" id="b6q-7Z-k53"/>
+                                    <constraint firstAttribute="trailing" secondItem="OAP-6g-aDV" secondAttribute="trailing" id="2Nk-x2-NIs"/>
+                                    <constraint firstItem="OAP-6g-aDV" firstAttribute="leading" secondItem="uxM-HW-Vrv" secondAttribute="leading" id="9WP-Yd-jCx"/>
+                                    <constraint firstItem="OAP-6g-aDV" firstAttribute="top" secondItem="uxM-HW-Vrv" secondAttribute="top" id="9yX-jg-QfX"/>
+                                    <constraint firstAttribute="bottom" secondItem="OAP-6g-aDV" secondAttribute="bottom" id="ZAY-ki-YAM"/>
                                 </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YzH-gi-eq4">
-                                <rect key="frame" x="0.0" y="511" width="375" height="70"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="21"/>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" semanticContentAttribute="forceLeftToRight" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pK6-lY-gYv">
+                                <rect key="frame" x="0.0" y="492" width="375" height="175"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="175" id="yr9-ly-ipw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="YzH-gi-eq4" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="9lT-2R-QM8"/>
-                            <constraint firstItem="OrW-bW-W6P" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Baw-xE-WK3"/>
-                            <constraint firstItem="YzH-gi-eq4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="GKY-JE-o6j"/>
-                            <constraint firstItem="OrW-bW-W6P" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="JKY-y4-knA"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="YzH-gi-eq4" secondAttribute="bottom" id="X97-jd-O6T"/>
-                            <constraint firstItem="YzH-gi-eq4" firstAttribute="top" secondItem="OrW-bW-W6P" secondAttribute="bottom" id="cpH-xN-b1A"/>
-                            <constraint firstItem="OrW-bW-W6P" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="vhM-qb-95d"/>
+                            <constraint firstItem="pK6-lY-gYv" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Bq4-N6-K1P"/>
+                            <constraint firstItem="uxM-HW-Vrv" firstAttribute="leading" secondItem="pK6-lY-gYv" secondAttribute="leading" id="UVa-yA-ozL"/>
+                            <constraint firstItem="uxM-HW-Vrv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="kBN-Yg-SNA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="pK6-lY-gYv" secondAttribute="bottom" id="oTW-rq-2w2"/>
+                            <constraint firstItem="pK6-lY-gYv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="uXQ-Ln-pzQ"/>
+                            <constraint firstItem="pK6-lY-gYv" firstAttribute="top" secondItem="uxM-HW-Vrv" secondAttribute="bottom" id="xlT-OQ-3UD"/>
+                            <constraint firstItem="uxM-HW-Vrv" firstAttribute="trailing" secondItem="pK6-lY-gYv" secondAttribute="trailing" id="z2F-wg-put"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -63,13 +70,13 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="captionLabel" destination="YzH-gi-eq4" id="SjC-0y-6dd"/>
-                        <outlet property="userImageView" destination="OrW-bW-W6P" id="3qH-0v-CkQ"/>
+                        <outlet property="captionLabel" destination="pK6-lY-gYv" id="kty-IB-i2u"/>
+                        <outlet property="userImageView" destination="OAP-6g-aDV" id="hOB-iJ-nGC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="480.80000000000001" y="133.5832083958021"/>
+            <point key="canvasLocation" x="479.19999999999999" y="132.68365817091455"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="bLE-Qm-Zpc">
