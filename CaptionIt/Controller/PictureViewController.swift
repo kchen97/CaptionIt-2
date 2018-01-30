@@ -73,7 +73,7 @@ class PictureViewController: UIViewController, UIImagePickerControllerDelegate, 
     func getImageData() {
         SVProgressHUD.show()
         
-        let headers: HTTPHeaders = ["Ocp-Apim-Subscription-Key" : "3ef12bba6b2040a2a06934fc85b83ae6", "Content-Type" : "application/octet-stream"]
+        let headers: HTTPHeaders = ["Ocp-Apim-Subscription-Key" : "", "Content-Type" : "application/octet-stream"]
         let imageData  = UIImageJPEGRepresentation(userImageView.image!, 0.3)!
 
         Alamofire.upload(imageData, to: microsoftURL, method: .post, headers: headers).responseJSON { (response) in
